@@ -9,9 +9,9 @@ function start () {
   one()
   two()
   three()
+  four()
 
   // Your turn! Create a new function called `two`, then call it from here.
-  }
 }
 
 function one () {
@@ -50,10 +50,32 @@ function three () {
 }
 
 // CREATE FUNCTION four HERE
+function four () {
+  // First, we have to find the element:
+  var four = document.getElementById('four')
+
+  // Next, we add an event listener to it:
+  four.addEventListener('click', makeRed)
+
+  // Finally, we add one to make the colour white again
+  four.addEventListener('mouseleave', makeWhite)
+}
 
 // Changes the background color of event's target
 function makeBlue (evt) {
   evt.target.style.backgroundColor = 'blue'
+}
+
+function makeGreen (evt) {
+  evt.target.style.backgroundColor = 'green'
+}
+
+function makeOrange (evt) {
+  evt.target.style.backgroundColor = 'orange'
+}
+
+function makeRed (evt) {
+  evt.target.style.backgroundColor = 'red'
 }
 
 function makeWhite (evt) {
